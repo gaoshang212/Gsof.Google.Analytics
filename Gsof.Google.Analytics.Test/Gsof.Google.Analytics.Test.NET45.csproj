@@ -53,12 +53,6 @@
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Gsof.Google.Analytics\Gsof.Google.Analytics.NET45.csproj">
-      <Project>{e3445bbe-cb41-4ae1-846e-0f0e3ec3d547}</Project>
-      <Name>Gsof.Google.Analytics.NET45</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
