@@ -34,13 +34,15 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Gsof.Google.Analytics.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Chsword.JDynamic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\JDynamic.1.2.0.0\lib\net\Chsword.JDynamic.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Gsof, Version=0.1.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gsof.0.1.7.0\lib\net40\Gsof.dll</HintPath>
+    <Reference Include="Gsof, Version=0.2.1.0, Culture=neutral, PublicKeyToken=03259f55685e777e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gsof.0.2.1.0\lib\net40\Gsof.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -82,6 +84,7 @@
       <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
       <Private>True</Private>
@@ -95,12 +98,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analytics.cs" />
+    <Compile Include="DynamicJson.cs" />
     <Compile Include="ITracker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tracker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Gsof.Google.Analytics.pfx" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -32,17 +32,20 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Gsof.Google.analytics.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Chsword.JDynamic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\JDynamic.1.2.0.0\lib\net\Chsword.JDynamic.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Gsof, Version=0.1.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gsof.0.1.7.0\lib\net40\Gsof.dll</HintPath>
+    <Reference Include="Gsof, Version=0.2.1.0, Culture=neutral, PublicKeyToken=03259f55685e777e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gsof.0.2.1.0\lib\net45\Gsof.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,8 +67,10 @@
     <Compile Include="..\Gsof.Google.Analytics\Tracker.cs">
       <Link>Tracker.cs</Link>
     </Compile>
+    <Compile Include="DynamicJson.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Gsof.Google.analytics.pfx" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

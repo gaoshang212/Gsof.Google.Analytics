@@ -3,9 +3,9 @@
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
-    <title>Gsof.Google.Analytics</title>
-    <authors>gaoshang212</authors>
-    <owners>gaoshang212</owners>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/gaoshang212/Gsof.Google.Analytics</projectUrl>
     <iconUrl>http://opensource.org/licenses/MIT</iconUrl>
@@ -27,7 +27,6 @@
 	</dependencies>
   </metadata>
   <files>
-	<file src=".\bin\$configuration$\$id$.dll" target="lib\net40\" />
 	<file src="..\$id$.Net45\bin\$configuration$\$id$.dll" target="lib\net45\" />
   </files>
 </package>

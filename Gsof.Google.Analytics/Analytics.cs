@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Chsword;
+using Codeplex.Data;
 using Gsof.Extensions;
 
 namespace Gsof.Google.Analytics
@@ -410,7 +410,7 @@ namespace Gsof.Google.Analytics
                 if (this._debug)
                 {
                     Debug.WriteLine(content);
-                    dynamic json = new JDynamic(content);
+                    dynamic json = DynamicJson.Parse(content);
                     if (json.hitParsingResult[0].valid)
                     {
                         return true;
